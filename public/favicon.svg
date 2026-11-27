@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Waystone">
+  <rect width="120" height="120" fill="#f3f5f0"/>
+  <ellipse cx="60" cy="104" rx="38" ry="5" fill="#07110e" opacity=".16"/>
+  <rect x="16" y="78" width="88" height="24" rx="12" fill="#087f71"/>
+  <rect x="27" y="55" width="66" height="21" rx="10.5" fill="#35d5b4"/>
+  <rect x="37" y="35" width="46" height="17" rx="8.5" fill="#07110e"/>
+  <path d="M60 8l2.6 6.2 6.2 2.6-6.2 2.6L60 25.6l-2.6-6.2-6.2-2.6 6.2-2.6Z" fill="#f0a74b"/>
+</svg>

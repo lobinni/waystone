@@ -1,0 +1,27 @@
+{
+  "$comment": "Template for deployment.json at the repository root. Copy the shape, not the values: the address must be your own deployment. scripts/deployment.mjs reads contract.address, contract.source and contract.chain; scripts/deploy.mjs writes contract.address, contract.deployedAt, contract.deployer and contract.lastTx for you.",
+  "contract": {
+    "name": "Waystone",
+    "source": "contracts/waystone.py",
+    "address": "0x0000000000000000000000000000000000000000",
+    "deployedAt": "",
+    "deployer": "",
+    "lastTx": "",
+    "explorer": "",
+    "chain": {
+      "id": 61999,
+      "hex": "0xf22f",
+      "name": "GenLayer Studionet",
+      "rpc": "https://studio.genlayer.com/api",
+      "explorer": "https://explorer-studio.genlayer.com",
+      "currency": { "name": "GEN Token", "symbol": "GEN", "decimals": 18 }
+    },
+    "links": {
+      "github": "https://github.com/lobinni/waystone",
+      "x": "https://x.com/dendadamda",
+      "xHandle": "@dendadamda",
+      "genlayer": "https://www.genlayer.com",
+      "genlayerDocs": "https://docs.genlayer.com"
+    }
+  }
+}

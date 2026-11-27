@@ -1,0 +1,116 @@
+/* Design tokens. Two themes: "light" (the daylight page) and "dim" (a deep ink-green night, never pure black). */
+
+:root {
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "DM Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --r-sm: 0px;
+  --r-md: 0px;
+  --r-lg: 0px;
+  --r-xl: 0px;
+  --header-h: 64px;
+  --maxw: 1220px;
+  --grid-size: 84px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring: cubic-bezier(0.3, 1.5, 0.5, 1);
+}
+
+:root,
+[data-theme="light"] {
+  --bg: #f3f5f0;
+  --bg-2: #e7ece6;
+  --surface: #fbfcf9;
+  --surface-2: #f8fcf9;
+  --surface-glass: rgba(251, 252, 249, 0.84);
+  --ink: #07110e;
+  --ink-2: #3d4a45;
+  --ink-3: #65706b;
+  --line: rgba(11, 18, 16, 0.18);
+  --line-strong: rgba(11, 18, 16, 0.44);
+
+  --brand: #35d5b4;
+  --brand-strong: #087f71;
+  --brand-text: #087f71;
+  --brand-soft: #dff3eb;
+  --on-brand: #07110e;
+  --btn-from: #35d5b4;
+  --btn-to: #2ecfab;
+
+  --violet: #07110e;
+  --violet-soft: rgba(7, 17, 14, 0.08);
+  --gold: #a86a10;
+  --gold-soft: rgba(240, 167, 75, 0.22);
+  --red: #c45b3e;
+  --red-soft: rgba(196, 91, 62, 0.13);
+  --green: #087f71;
+  --green-soft: rgba(8, 127, 113, 0.13);
+
+  --stone-1: #35d5b4;
+  --stone-2: #087f71;
+  --stone-3: #f0a74b;
+  --stone-4: #07110e;
+  --stone-5: #dff3eb;
+  --stone-6: #65706b;
+  --stone-7: #e7ece6;
+
+  --shadow-sm: 0 1px 0 rgba(7, 17, 14, 0.06);
+  --shadow-md: 0 18px 44px rgba(7, 17, 14, 0.1);
+  --shadow-lg: 0 26px 62px rgba(7, 17, 14, 0.14);
+  --glow: 0 0 0 4px rgba(53, 213, 180, 0.32);
+  --blob-a: rgba(53, 213, 180, 0.24);
+  --blob-b: rgba(8, 127, 113, 0.14);
+  --blob-c: rgba(240, 167, 75, 0.18);
+  --grid-line: rgba(11, 18, 16, 0.055);
+  --code-bg: #e7ece6;
+  --code-ink: #07110e;
+  --grad: linear-gradient(110deg, #35d5b4 0%, #087f71 100%);
+  --backdrop: rgba(7, 17, 14, 0.44);
+  --hero-scrim-a: rgba(243, 245, 240, 0.74);
+  --hero-scrim-b: rgba(243, 245, 240, 0.93);
+}
+
+[data-theme="dim"] {
+  --bg: #07110e;
+  --bg-2: #0a1512;
+  --surface: #0d1a16;
+  --surface-2: #101f1a;
+  --surface-glass: rgba(13, 26, 22, 0.84);
+  --ink: #f3f5f0;
+  --ink-2: #c2ccc7;
+  --ink-3: #8a938e;
+  --line: rgba(243, 245, 240, 0.15);
+  --line-strong: rgba(243, 245, 240, 0.34);
+
+  --brand: #35d5b4;
+  --brand-strong: #2ecfab;
+  --brand-text: #35d5b4;
+  --brand-soft: rgba(53, 213, 180, 0.15);
+  --on-brand: #07110e;
+  --btn-from: #35d5b4;
+  --btn-to: #2ecfab;
+
+  --violet: #f3f5f0;
+  --violet-soft: rgba(243, 245, 240, 0.11);
+  --gold: #f0a74b;
+  --gold-soft: rgba(240, 167, 75, 0.2);
+  --red: #e2825f;
+  --red-soft: rgba(226, 130, 95, 0.16);
+  --green: #35d5b4;
+  --green-soft: rgba(53, 213, 180, 0.16);
+
+  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 18px 44px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 26px 62px rgba(0, 0, 0, 0.55);
+  --glow: 0 0 0 4px rgba(53, 213, 180, 0.26);
+  --blob-a: rgba(53, 213, 180, 0.16);
+  --blob-b: rgba(8, 127, 113, 0.2);
+  --blob-c: rgba(240, 167, 75, 0.12);
+  --grid-line: rgba(243, 245, 240, 0.05);
+  --code-bg: #0a1512;
+  --code-ink: #dff3eb;
+  --grad: linear-gradient(110deg, #35d5b4 0%, #2ecfab 100%);
+  --backdrop: rgba(3, 8, 7, 0.66);
+  --hero-scrim-a: rgba(7, 17, 14, 0.78);
+  --hero-scrim-b: rgba(7, 17, 14, 0.94);
+}

@@ -1,0 +1,135 @@
+/* The signature layer: flat corners, hard offset shadows, mono labels and teal buttons. Loaded last. */
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  font-weight: 700; font-size: 0.95rem; letter-spacing: -0.01em;
+  padding: 12px 22px; border: 1px solid var(--ink); background: var(--brand); color: var(--on-brand);
+  border-radius: 0; box-shadow: 5px 5px 0 rgba(7, 17, 14, 0.14);
+  transition: transform 0.16s var(--ease), box-shadow 0.16s var(--ease), background 0.16s, color 0.16s, border-color 0.16s;
+  text-decoration: none !important;
+}
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 rgba(7, 17, 14, 0.18); text-decoration: none !important; }
+.btn:active { transform: translate(0, 0); box-shadow: 2px 2px 0 rgba(7, 17, 14, 0.16); }
+.btn--primary { background: var(--brand); color: var(--on-brand); border-color: var(--ink); }
+.btn--soft { background: var(--brand-soft); color: var(--ink); border-color: var(--line-strong); box-shadow: none; }
+.btn--soft:hover { background: var(--brand); color: var(--on-brand); box-shadow: 5px 5px 0 rgba(7, 17, 14, 0.14); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); box-shadow: none; }
+.btn--ghost:hover { background: var(--surface); box-shadow: 5px 5px 0 rgba(7, 17, 14, 0.1); }
+.btn--danger { background: var(--red); color: #f8fcf9; border-color: var(--ink); }
+.btn--quiet { background: transparent; border-color: transparent; color: var(--ink-2); box-shadow: none; }
+.btn--quiet:hover { color: var(--ink); background: var(--brand-soft); box-shadow: none; transform: none; }
+.btn--sm { padding: 8px 14px; font-size: 0.86rem; }
+.btn--lg { padding: 15px 30px; font-size: 1.02rem; }
+.btn:disabled { opacity: 0.5; transform: none; box-shadow: none; }
+
+/* ---------- mono labels ---------- */
+.eyebrow,
+.sectiontitle__eyebrow,
+.counter__label,
+.dt,
+dt,
+.field__label,
+.tag,
+.badge,
+.addr em,
+.poolcard__id {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ---------- cards: flat paper with a hard offset shadow ---------- */
+.card,
+.poolcard,
+.doccard,
+.notice,
+.errorbox,
+.empty,
+.steprow__item,
+.principle,
+.contractcard {
+  border-radius: 0;
+}
+.card:hover,
+.poolcard:hover,
+.doccard:hover { box-shadow: 14px 14px 0 rgba(53, 213, 180, 0.18); }
+
+/* ---------- tags and badges: sharp, uppercase, mono ---------- */
+.tag { border-radius: 0; padding: 4px 9px; border: 1px solid var(--line); background: var(--surface); }
+.badge { border-radius: 0; padding: 4px 10px; border: 1px solid var(--line-strong); }
+.badge i { width: 6px; height: 6px; border-radius: 50%; }
+
+/* ---------- form controls: sharp, ink border, teal focus ---------- */
+input, select, textarea {
+  border-radius: 0;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  transition: border-color 0.16s, box-shadow 0.16s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--brand-strong);
+  box-shadow: 0 0 0 3px rgba(53, 213, 180, 0.28);
+}
+.field__label { color: var(--ink-3); }
+.field__label b { font-family: var(--font-mono); font-weight: 500; color: var(--ink); }
+
+/* ---------- modal: paper sheet, no rounding, heavy shadow ---------- */
+.modal__card { border-radius: 0; border: 1px solid var(--ink); box-shadow: 22px 22px 0 rgba(7, 17, 14, 0.16); }
+.modal__head { border-bottom: 1px solid var(--line); }
+
+/* ---------- nav pills become sharp tabs ---------- */
+.themetoggle { border-radius: 0; }
+
+/* ---------- counters and data readouts ---------- */
+.counter { border-radius: 0; }
+.counter__label { color: var(--ink-3); }
+.mono, .countdown, .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- hero ---------- */
+.hero { border-radius: 0; position: relative; isolation: isolate; }
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(-1 * var(--header-h));
+  left: calc(50% - 50vw);
+  width: 100vw;
+  height: calc(100% + var(--header-h));
+  background-image:
+    linear-gradient(180deg, var(--hero-scrim-a) 0%, var(--hero-scrim-b) 58%, var(--bg) 100%),
+    url("/images/hero.jpg");
+  background-size: cover;
+  background-position: center 42%;
+  pointer-events: none;
+}
+.hero__stage { border-radius: 0; }
+.hero__hint { border-radius: 0; }
+.grad {
+  background: linear-gradient(100deg, var(--brand) 0%, var(--brand-strong) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- the flat stone scene ---------- */
+.stonescene { position: relative; display: grid; place-items: center; width: 100%; height: 100%; }
+.stonescene__halo {
+  position: absolute; width: 78%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle, rgba(53, 213, 180, 0.2), transparent 66%);
+}
+.stonescene svg { position: relative; width: 100%; height: 100%; overflow: visible; transition: transform 0.35s var(--ease); }
+.stonescene__ground { fill: rgba(7, 17, 14, 0.14); }
+.stonescene__stone { animation: stone-float 5s ease-in-out infinite alternate; transform-origin: center; }
+.stonescene__spark { transform-origin: 50px 8px; animation: spark 3.4s ease-in-out infinite; }
+@keyframes stone-float { to { transform: translateY(-3px); } }
+
+/* ---------- reveal on scroll ---------- */
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.5s var(--ease), transform 0.5s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- deployment notice ---------- */
+.deploynotice { border-left: 4px solid var(--brand); }

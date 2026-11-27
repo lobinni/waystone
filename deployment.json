@@ -1,0 +1,27 @@
+{
+  "$comment": "Single source of truth for the deployed contract. Change `contract.address` here and every script and the website follow. `node scripts/deploy.mjs` writes it for you.",
+  "contract": {
+    "name": "Waystone",
+    "source": "contracts/waystone.py",
+    "address": "0xe740d1378Cd4002b8bdaC8bec2B1A83F73adFe85",
+    "deployedAt": "2026-11-27T11:09:23Z",
+    "deployer": "0xc782a9C1Ee1cFdc7D26AAa3c0649Cd6827fd6246",
+    "lastTx": "0x953b86bc76a5524eea9d1daaadd314f859f91de71118b474387b51b4e33e07ef",
+    "explorer": "https://explorer-studio.genlayer.com/address/0xe740d1378Cd4002b8bdaC8bec2B1A83F73adFe85",
+    "chain": {
+      "id": 61999,
+      "hex": "0xf22f",
+      "name": "GenLayer Studionet",
+      "rpc": "https://studio.genlayer.com/api",
+      "explorer": "https://explorer-studio.genlayer.com",
+      "currency": { "name": "GEN Token", "symbol": "GEN", "decimals": 18 }
+    },
+    "links": {
+      "github": "https://github.com/lobinni/waystone",
+      "x": "https://x.com/dendadamda",
+      "xHandle": "@dendadamda",
+      "genlayer": "https://www.genlayer.com",
+      "genlayerDocs": "https://docs.genlayer.com"
+    }
+  }
+}
